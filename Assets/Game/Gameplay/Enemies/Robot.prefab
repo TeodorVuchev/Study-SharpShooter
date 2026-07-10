@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 791021403239173836}
   - component: {fileID: 2336206500604232727}
+  - component: {fileID: 3129759417000227850}
   - component: {fileID: 8083537602390288716}
   - component: {fileID: 8600517487754765203}
   m_Layer: 7
@@ -47,6 +48,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb993ae6ff7de3e4f908080bc242b661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MB_Robot
+--- !u!114 &3129759417000227850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4604719732916526490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c2e760d14b64474fa0612ee2b429bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MB_Health
+  maxHP: 3
 --- !u!195 &8083537602390288716
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -147,6 +161,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8ee6b4e96d25e3e4f9f31ed5e2666cdb, type: 3}
       propertyPath: m_Name
       value: HoveringRobot02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8ee6b4e96d25e3e4f9f31ed5e2666cdb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
