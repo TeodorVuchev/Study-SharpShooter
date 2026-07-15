@@ -9,8 +9,9 @@ public class MB_ActiveWeapon : MonoBehaviour
     [SerializeField] SOS_Weapon startingWeaponSO;
     [SerializeField] GameObject zoomScope;
     [SerializeField] TMP_Text ammoUI;
+    [SerializeField] Camera weaponCamera;
+    [SerializeField] CinemachineCamera virtualCamera;
 
-    CinemachineCamera virtualCamera;
     Animator animator;
     FirstPersonController firstPersonController;
 
@@ -28,7 +29,6 @@ public class MB_ActiveWeapon : MonoBehaviour
 
     void Awake()
     {
-        virtualCamera = FindFirstObjectByType<CinemachineCamera>();
         firstPersonController = GetComponentInParent<FirstPersonController>();
         starterAssetsInputs = GetComponentInParent<StarterAssetsInputs>();
         animator = GetComponent<Animator>();
@@ -84,7 +84,6 @@ public class MB_ActiveWeapon : MonoBehaviour
 
         if (currentAmmo <= 0) return;
 
-
         currentWeapon.Shoot(currentWeaponSO);
         AdjustAmmo(-1);
         animator.Play(FIRE_STRING, 0, 0f);
@@ -107,6 +106,7 @@ public class MB_ActiveWeapon : MonoBehaviour
 
         if (starterAssetsInputs.zoom)
         {
+            weaponCamera.fieldOfView = currentWeaponSO.ZoomAmount;
             virtualCamera.Lens.FieldOfView = currentWeaponSO.ZoomAmount;
             zoomScope.SetActive(true);
             firstPersonController.ChangeRotationSpeed(currentWeaponSO.ZoomRotationSpeed);
@@ -114,6 +114,7 @@ public class MB_ActiveWeapon : MonoBehaviour
         else
         {
             zoomScope.SetActive(false);
+            weaponCamera.fieldOfView = defaultFOV;
             virtualCamera.Lens.FieldOfView = defaultFOV;
             firstPersonController.ChangeRotationSpeed(defaultRotationSpeed);
         }

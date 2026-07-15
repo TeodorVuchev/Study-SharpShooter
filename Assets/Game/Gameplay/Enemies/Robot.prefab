@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8083537602390288716}
   - component: {fileID: 8600517487754765203}
   - component: {fileID: 3570576413306183596}
+  - component: {fileID: 5981317939244143518}
   m_Layer: 7
   m_Name: Robot
   m_TagString: Untagged
@@ -62,6 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MB_Health
   maxHP: 20
+  deathVFX: {fileID: 4292012520095088614, guid: 3f19b154cb41e9f4c8037c8c1a142ba1, type: 3}
 --- !u!195 &8083537602390288716
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -129,6 +131,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!136 &5981317939244143518
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4604719732916526490}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7284199867051554431
 GameObject:
   m_ObjectHideFlags: 0

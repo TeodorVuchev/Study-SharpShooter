@@ -7,6 +7,8 @@ public class MB_Robot : MonoBehaviour
 
     FirstPersonController player;
     NavMeshAgent agent;
+
+    const string PLAYER_LAYER = "Player";
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -19,6 +21,18 @@ public class MB_Robot : MonoBehaviour
 
     private void Update()
     {
-        agent.SetDestination(player.transform.position);
+        if(player != null)
+        {
+            agent.SetDestination(player.transform.position);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(PLAYER_LAYER))
+        {
+            MB_EnemyHealth enemyHealth = GetComponent<MB_EnemyHealth>();
+            enemyHealth.SelfDestruct();
+        }
     }
 }
