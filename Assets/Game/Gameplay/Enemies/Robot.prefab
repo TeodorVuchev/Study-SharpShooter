@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 791021403239173836}
   - component: {fileID: 2336206500604232727}
   - component: {fileID: 5887210172296145626}
-  - component: {fileID: 3129759417000227850}
   - component: {fileID: 8083537602390288716}
   - component: {fileID: 8600517487754765203}
   - component: {fileID: 3570576413306183596}
@@ -62,20 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2e760d14b64474fa0612ee2b429bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MB_Health
-  maxHP: 3
---- !u!114 &3129759417000227850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4604719732916526490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c2e760d14b64474fa0612ee2b429bfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MB_Health
-  maxHP: 3
+  maxHP: 20
 --- !u!195 &8083537602390288716
 NavMeshAgent:
   m_ObjectHideFlags: 0
