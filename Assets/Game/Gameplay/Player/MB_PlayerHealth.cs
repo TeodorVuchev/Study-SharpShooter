@@ -1,3 +1,4 @@
+using System;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
@@ -54,5 +55,10 @@ public class MB_PlayerHealth : MonoBehaviour
                 hpAvailable--;
             }
         }
+    }
+
+    internal void TakeDamage(object damage)
+    {
+        throw new NotImplementedException();
     }
 }

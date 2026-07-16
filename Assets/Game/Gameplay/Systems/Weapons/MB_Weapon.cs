@@ -20,12 +20,13 @@ public class MB_Weapon : MonoBehaviour
         muzzleFlash.Play();
         impulseSource.GenerateImpulse();
 
-        if (!Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity, interactionLayers)) return;
+        if (!Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity, interactionLayers, QueryTriggerInteraction.Ignore)) return;
 
         Instantiate(weapon.HitVFXPreFab, hit.point, Quaternion.identity);
 
-        if (!hit.collider.TryGetComponent<MB_EnemyHealth>(out MB_EnemyHealth component)) return;
-
-        component.TakeDamage(weapon.Damage);
+        if (hit.collider.GetComponentInParent<MB_EnemyHealth>() is MB_EnemyHealth component)
+        {
+            component.TakeDamage(weapon.Damage);
+        }
     }
 }
