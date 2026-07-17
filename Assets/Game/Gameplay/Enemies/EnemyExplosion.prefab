@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MB_Explosion
   radius: 1.5
+  damage: 2
 --- !u!198 &4350421682434548186
 ParticleSystem:
   m_ObjectHideFlags: 0

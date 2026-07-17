@@ -7,9 +7,17 @@ public class MB_EnemyHealth : MonoBehaviour
 
     int currentHP;
 
+    MB_GameManager manager;
+
     private void Awake()
     {
         currentHP = maxHP;
+    }
+
+    private void Start()
+    {
+        manager = FindFirstObjectByType<MB_GameManager>();
+        manager.AdjustEnemiesLeft(1);
     }
 
     public void TakeDamage(int damage)
@@ -21,12 +29,14 @@ public class MB_EnemyHealth : MonoBehaviour
             {
                 Instantiate(deathVFX, transform.position, Quaternion.identity);
             }
+            manager.AdjustEnemiesLeft(-1);
             Destroy(gameObject);
         }
     }
 
     public void SelfDestruct()
     {
+        manager.AdjustEnemiesLeft(-1);
         Instantiate(deathVFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

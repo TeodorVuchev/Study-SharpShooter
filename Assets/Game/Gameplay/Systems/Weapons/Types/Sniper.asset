@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ada391b565ef8a4c9a2588bebb0e71d, type: 3}
   m_Name: Sniper
   m_EditorClassIdentifier: Assembly-CSharp::SOS_Weapon
-  Damage: 20
+  Damage: 30
   FireRate: 1
   HitVFXPreFab: {fileID: 640347941699449674, guid: b429d2999d9ff5745b338ae7c28c3262, type: 3}
   IsAutomatic: 0

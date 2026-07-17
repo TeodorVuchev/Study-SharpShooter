@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2e760d14b64474fa0612ee2b429bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MB_Health
-  maxHP: 20
+  maxHP: 10
   deathVFX: {fileID: 4292012520095088614, guid: 3f19b154cb41e9f4c8037c8c1a142ba1, type: 3}
 --- !u!195 &8083537602390288716
 NavMeshAgent:
